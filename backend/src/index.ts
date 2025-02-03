@@ -13,7 +13,7 @@ app.use(json());
 
 // CORS configuration
 const corsOptions = {
-    origin: ['http://localhost:3000'], // List of allowed origins
+    origin: '*', // List of allowed origins
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     credentials: true, // Allow credentials (cookies, etc.)
