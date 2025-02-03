@@ -56,7 +56,7 @@ export const login = async (credentials: {
   userIdentifier: string;
   password: string;
 }) => {
-  return await apiRequest('POST', '/auth/login', credentials);
+  return await apiRequest('POST', 'api/auth/login', credentials);
 };
 
 export const register = async (userData: {
@@ -64,21 +64,21 @@ export const register = async (userData: {
   email: string;
   password: string;
 }) => {
-  return await apiRequest('POST', '/auth/register', userData);
+  return await apiRequest('POST', 'api/auth/register', userData);
 };
 
 export const getAllTasks = async () => {
-  return await apiRequest('GET', '/tasks');
+  return await apiRequest('GET', 'api/tasks');
 };
 
 export const updateTask = async (taskId: string, updatedData: any) => {
-  return await apiRequest('PUT', `/tasks/${taskId}`, updatedData);
+  return await apiRequest('PUT', `api/tasks/${taskId}`, updatedData);
 };
 
 export const removeTask = async (taskId: string) => {
-  return await apiRequest('DELETE', `/tasks/${taskId}`);
+  return await apiRequest('DELETE', `api/tasks/${taskId}`);
 };
 
 export const createTask = async (taskData: any) => {
-  return await apiRequest('POST', '/tasks', taskData);
+  return await apiRequest('POST', 'api/tasks', taskData);
 };
